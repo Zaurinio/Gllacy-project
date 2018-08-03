@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
 
@@ -28,13 +31,13 @@
 			<ul class="user-navigation">
 				<li class="search">
 					<p class="search-icon">
-						<span class="visually-hidden">
-							<a href="#" class="button">Поиск</a>
-						</span></p>
+						<a href="#" class="button"><span class="visually-hidden">Поиск</span></a>
+					</p>
 					<div class="header-popup">
 						<form class="form-search" action="https://echo.htmlacademy.ru" method="get" name="form-search">
-							<label for="search-field">Поиск</label>
-							<input type="text" name="search-field" id="search-field" placeholder="Что ищем?"><button class="button visually-hidden" type="submit">Поиск</button>
+							<label>Поиск
+							<input type="text" name="search-field" placeholder="Что ищем?"><button class="button visually-hidden" type="submit">Поиск</button>
+							</label>
 						</form>
 					</div>
 				</li>
@@ -44,10 +47,12 @@
 					</p>
 					<div class="header-popup">
 						<form class="form-profile" action="https://echo.htmlacademy.ru" method="get" name="form-profile">
-							<label for="email-field">Электронная почта</label>
-							<input type="email" name="email-field" id="email-field" placeholder="Электронная ">
-							<label for="password-field">Пароль</label>
-							<input type="password" name="password-field" id="password-field" placeholder="Пароль">
+							<label>Электронная почта
+							<input type="email" name="email-field" placeholder="Электронная почта">
+							</label>
+							<label>Пароль
+							<input type="password" name="password-field" placeholder="Пароль">
+							</label>
 							<button class="button" type="submit">Войти</button>
 							<p class="profile-support">
 								<a href="#">Забыли пароль?</a>
@@ -124,13 +129,10 @@
 				<h2 class="visually-hidden">Хиты продаж</h2>
 				<ul class="catalog-list">
 					<li class="catalog-item">
-						<figure class="catalog-image">
+						<figure class="catalog-image catalog-offer">
 							<a href="#">
-								<img src="#" width="100" height="100" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-							</a>
-							<a href="#">
-								<img src="#" width="20" height="20" alt="Хит продаж">
-							</a>
+								<img src="img/product-1.jpg" width="100" height="100" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+							</a>							
 						</figure>
 						<p class="catalog-price">310 Р/кг</p>
 						<p class="catalog-description">
@@ -141,13 +143,10 @@
 						</p>
 					</li>
 					<li class="catalog-item">
-						<figure class="catalog-image">
+						<figure class="catalog-image catalog-offer">
 							<a href="#">
-								<img src="#" width="100" height="100" alt="Сливочно-кофейное с кусочками шоколада">
-							</a>
-							<a href="#">
-								<img src="#" width="20" height="20" alt="Хит продаж">
-							</a>
+								<img src="img/product-2.jpg" width="100" height="100" alt="Сливочно-кофейное с кусочками шоколада">
+							</a>							
 						</figure>
 						<p class="catalog-price">380 Р/кг</p>
 						<p class="catalog-description">
@@ -158,13 +157,10 @@
 						</p>
 					</li>
 					<li class="catalog-item">
-						<figure class="catalog-image">
+						<figure class="catalog-image catalog-offer">
 							<a href="#">
-								<img src="#" width="100" height="100" alt="Сливочно-клубничное с присыпкой из белого шоколада">
-							</a>
-							<a href="#">
-								<img src="#" width="20" height="20" alt="Хит продаж">
-							</a>
+								<img src="img/product-3.jpg" width="100" height="100" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+							</a>							
 						</figure>
 						<p class="catalog-price">355 Р/кг</p>
 						<p class="catalog-description">
@@ -175,13 +171,10 @@
 						</p>
 					</li>
 					<li class="catalog-item">
-						<figure class="catalog-image">
+						<figure class="catalog-image catalog-offer">
 							<a href="#">
-								<img src="#" width="100" height="100" alt="Сливочное крем-брюле с карамельной подливкой">
-							</a>
-							<a href="#">
-								<img src="#" width="20" height="20" alt="Хит продаж">
-							</a>
+								<img src="img/product-4.jpg" width="100" height="100" alt="Сливочное крем-брюле с карамельной подливкой">
+							</a>							
 						</figure>
 						<p class="catalog-price">415 Р/кг</p>
 						<p class="catalog-description">
@@ -235,7 +228,7 @@
 						Адрес главного офиса и офлайн-магазина: <span class="contacts-address">ул. Большая Конюшенная 19/8, Санкт-Петербург</span>
 					</p>
 					<p class="contacts-phone-title">
-						Для заказов по телефону: <span class="contacts-phone"><a href="tel">8 812 450-25-25</a></span> (с 10 до 20 ежедневно)
+						Для заказов по телефону: <span class="contacts-phone"><a href="tel:+78124502525">8 812 450-25-25</a></span> (с 10 до 20 ежедневно)
 					</p>
 					<p class="feedback">
 						<a href="#" class="button">Форма обратной связи</a>
@@ -287,8 +280,8 @@
 			</ul>
 
 			<div class="site-developer">
-				<a href="https://htmlacademy.ru/"><img src="#" width="100" height="100" alt="Логотип разработчика сайта"></a>
-				<a href="https://htmlacademy.ru/"><p>Сделано в HTML Academy © 2017</p></a>
+				<img src="#" width="100" height="100" alt="Логотип разработчика сайта">
+				<p>Сделано в <a href="https://htmlacademy.ru/">HTML Academy</a> © 2017</p>
 			</div>
 		</div>
 	</footer>
@@ -296,7 +289,7 @@
 
 <div class="container-popup">
 	<button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
-	<legend class="write-us">Мы обязательно вам ответим!</legend>	
+	<p class="write-us">Мы обязательно вам ответим!</p>	
 	<form class="form-write-us" action="https://echo.htmlacademy.ru" method="post" name="form-write-us">
 			<label for="write-us-name">Ваше имя</label>	
 			<input type="text" name="name" id="write-us-name" placeholder="Как вас зовут?">

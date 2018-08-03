@@ -1,0 +1,218 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Roboto", Arial, sans-serif;
+	font-size: 16px;
+	line-height: 22px;
+	font-weight: 500;
+	color: #fdfaf3;
+	background-color: #869f91;	
+}
+
+a {
+	text-decoration: none;
+}
+
+.site-navigation {
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: 700;
+	list-style: none;
+}
+
+.site-navigation li {
+	list-style: none;
+}
+
+.site-navigation a {
+	color: #ffffff;
+}
+
+.user-navigation {
+	list-style: none;
+}
+
+.user-navigation a {
+	color: #ffffff;
+}
+
+.working-hours {
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: 700;
+}
+
+.working-number {
+	font-size: 22px;
+	line-height: 24px;
+	font-weight: 700;
+}
+
+.production-list {	
+	list-style: none;
+}
+
+.production-item a {
+	font-size: 32px;
+	line-height: 44px;
+	font-weight: 700;
+	color: #ffffff;
+}
+
+.production-offer {
+	font-size: 60px;
+	line-height: 60.35px;
+	font-weight: 700;
+}
+
+.promo-list {
+	list-style: none;
+}
+
+.promo-list a {
+	color: #ffffff;
+}
+
+.promo-title {
+	font-size: 35px;
+	line-height: 41px;
+	font-weight: 700;
+}
+
+.promo-terms {
+	font-size: 18px;
+	line-height: 22px;
+	font-weight: 700;
+}
+
+.catalog-list {
+	list-style: none;
+}
+
+.catalog-list a {
+	color: #ffffff;
+}
+
+.catalog-price {
+	font-size: 45px;
+	line-height: 45px;
+	font-weight: 700;
+}
+
+.about-us ul {
+	list-style: none;	
+}
+
+.about-us-title {
+	font-size: 24px;
+	line-height: 30px;
+	color: #323232;
+}
+
+.about-us-list {
+	font-size: 16px;
+	line-height: 22px;
+	font-weight: 400;
+	color: #323232;
+}
+
+
+.blog-title {
+	font-size: 16px;
+	line-height: 22px;
+	color: #323232;
+}
+
+.blog-description {
+	font-size: 24px;
+	line-height: 30px;
+	font-weight: 700;
+	text-decoration: underline;
+}
+
+.blog-description a {
+	color: #323232;
+}
+
+.newsletters-description {	
+	font-weight: 400;
+	color: #5a5a5a;
+}
+
+.contacts {
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: 400;
+	color: #323232;
+}
+
+.contacts-address {
+	font-size: 18px;
+	line-height: 20px;
+	font-weight: 700;
+}
+
+.contacts-phone {
+	font-size: 18px;
+	line-height: 22px;
+	font-weight: 700;
+}
+
+.contacts-phone a {
+	color: #323232;
+}
+
+.feedback {
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: 700;
+}
+
+.feedback a {
+	color: #fefefe;
+}
+
+.main-footer a {
+	color: #ffffff;
+}
+
+.footer-social {
+	list-style: none;
+}
+
+.additional-information {
+	font-size: 13px;
+	line-height: 18px;
+	font-weight: 400;
+	list-style: none;
+}
+
+.additional-information-suppliers {
+	font-weight: 700;
+}
+
+.button	{
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: 700;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.breadcrumbs {
+	font-size: 14px;
+	line-height: 16px;
+	list-style: none;
+}
+
+.breadcrumbs a {
+	color: #ffffff;
+}
+
+.pagination {
+	list-style: none;
+}
+
+.pagination-item a {
+	color: #ffffff;
+}
