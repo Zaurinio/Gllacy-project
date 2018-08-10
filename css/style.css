@@ -52,54 +52,75 @@ input[type="radio"].visually-hidden {
 }
 
 .main-navigation {
-	display: flex;
+	display: flex;	
 	padding-top: 10px;
 }
 
-.main-header-logo {
-	padding-right: 22px;
+.main-header-logo {	
+	margin-right: 22px;
+	align-items: baseline;	
 }
+
 
 .site-navigation {
 	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
 	font-size: 16px;
 	line-height: 18px;
 	font-weight: 700;
 	list-style: none;
 	margin: 0;
 	padding: 0;
-}
-
-.site-navigation > li:not(:last-child) {
-	margin-right: 27px;
+	max-width: 600px;
+	padding-top: 14px;
+	
 }
 
 .site-navigation li {
 	list-style: none;
-	padding-top: 20px;	
+	position: relative;
 }
 
-.site-navigation a {
+.site-navigation  a {
 	color: #ffffff;
+	display: block;
+	padding: 7px 14px;
 }
+
+.site-navigation > li:hover > a {
+	background-color: #f7f6f3;
+	color: #333333;
+	border-radius: 14px;
+}
+
+.site-navigation li:hover .catalog-navigation  {
+	background-color: #f8f7f4;
+	border-radius: 3px;
+	display: block;
+}
+
+.site-navigation-style {	
+	position: absolute;
+	left: -7px;
+	top: 100%;
+	padding-top: 7px;
+	width: 142px;
+}
+
 
 .catalog-navigation {
 	display: none;
 	margin: 0;
-	padding: 0;
+	padding: 0 0 8px;
 }
 
-.site-navigation li:first-child:hover .catalog-navigation {
-	display: block;
-	position: absolute;
-	background-color: #f8f7f4;
-	border-radius: 3px;
-
+.catalog-navigation a {
+	padding: 6px 20px;	
 }
 
 .catalog-navigation li a {	
 	color: #323232;
-
 }
 
 .catalog-navigation li {
@@ -108,20 +129,40 @@ input[type="radio"].visually-hidden {
 	line-height: 16px;
 	font-size: 14px;
 	text-align: left;
-	padding-top: 11px;
+	/*padding-top: 11px;
 	padding-bottom: 12px;
-	padding-left: 20px;
+	padding-left: 20px;*/
 	font-weight: 400;
 }
+
+.catalog-navigation li:last-child {
+	margin-bottom: 0;
+}
+
 
 .catalog-navigation li:hover {
 	background-color: #fbded7;
 }
 
 .catalog-novelties {
-	padding-bottom: 14px;
+	/*padding-bottom: 14px;
 	border-bottom: 1px solid #d1d0ce;	
-	width: 144px;
+	width: 144px;*/
+}
+
+.catalog-navigation .catalog-novelties {
+	padding: 4px 0 7px;
+	margin-bottom: 3px;
+}
+
+.catalog-navigation .catalog-novelties::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 6px;
+	right: 9px;
+	height: 1px;
+	background-color: #ccc;
 }
 
 .catalog-novelties a {
@@ -130,19 +171,19 @@ input[type="radio"].visually-hidden {
 
 .user-navigation {
 	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
 	list-style: none;
 	margin: 0;
 	padding: 0;
 	margin-left: auto;
+	max-width: 300px;
+	padding-top: 14px;
 }
 
 .user-navigation a {
 	color: #ffffff;
 	display: block;
-}
-
-.user-navigation li {
-	padding-top: 14px;
 }
 
 .user-navigation li:not(:last-child) {
@@ -177,12 +218,17 @@ input[type="radio"].visually-hidden {
 
 .search:hover .header-popup {	
 	display: block;
-	position: absolute;
 	width: 340px;
 	padding: 20px 12px;
 	background-color: #f8f7f4;
-	border-radius: 3px;
+	border-radius: 3px;	
+}
+
+.search-style {
+	position: absolute;
 	right: 0px;
+	top: 100%;
+	padding-top: 5px;
 }
 
 .search .header-popup input {
@@ -228,19 +274,29 @@ input[type="radio"].visually-hidden {
 }
 
 .profile:hover .header-popup {
-	display: block;
-	position: absolute;
-	width: 278px;
+	display: block;	
 	background-color: #f8f7f4;
 	border-radius: 3px;
+	width: 278px;
 	padding: 20px;
+}
+
+.profile-style {
+	position: absolute;	
 	right: 0px;
+	top: 100%
+	padding-top: 5px;
 }
 
 .profile .header-popup input {
-	margin-bottom: 20px;
+	
 	padding: 10px 13px;
-	width: 240px;
+	width: 100%;
+}
+
+.form-profile label {
+	display: block;
+	margin-bottom: 20px;
 }
 
 .profile-support {
@@ -248,7 +304,7 @@ input[type="radio"].visually-hidden {
 	margin: 0;
 	line-height: 24px;
 	font-size: 13px;
-	font-weight: 400px;
+	font-weight: 400;
 }
 
 .profile-support a {
@@ -534,12 +590,18 @@ input[type="radio"].visually-hidden {
 }
 
 .cart:hover .form-cart {
-	display: block;
-	position: absolute;
-	right: 0px;
+	display: block;	
 	background-color: #f8f7f4;
 	color: #323232;
 	width: 540px;
+	border-radius: 5px;
+}
+
+.cart-style {
+	position: absolute;
+	right: 0px;
+	top: 100%;
+	padding-top: 5px;
 }
 
 .form-cart table {
@@ -549,6 +611,12 @@ input[type="radio"].visually-hidden {
 .form-cart {
 	padding-left: 16px;
 	padding-right: 16px;
+}
+
+.cart-product-cancel {
+	border: 0;
+	background: none;
+	padding: 0;
 }
 
 .cart-product-cancel::before {
@@ -579,10 +647,18 @@ input[type="radio"].visually-hidden {
 	text-align: right;
 }
 
+
+.cart-order-confirm  {
+	text-align: right;
+}
+
+
 .cart-order-confirm a {
 	padding: 10px 15px;
 	display: inline-block;	
 }
+
+
 
 .main-footer .container {
 	display: flex;	
