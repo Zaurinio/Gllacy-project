@@ -16,7 +16,7 @@ body {
 	line-height: 22px;
 	font-weight: 500;
 	color: #fdfaf3;
-	background-color: #869f91;	
+	background-color: #869f91;
 }
 
 a {
@@ -52,20 +52,25 @@ input[type="radio"].visually-hidden {
 }
 
 .main-navigation {
-	display: flex;	
-	padding-top: 10px;
+	display: flex;
+	align-items: flex-start;
+	padding-top: 10px;	
 }
 
 .main-header-logo {	
-	margin-right: 22px;
-	align-items: baseline;	
+	margin-right: 22px;	
+}
+
+.main-header-logo img {
+	border-style: none;
+	vertical-align: top;
+	max-width: 100%;
 }
 
 
 .site-navigation {
 	display: flex;
-	flex-wrap: wrap;
-	align-items: baseline;
+	flex-wrap: wrap;	
 	font-size: 16px;
 	line-height: 18px;
 	font-weight: 700;
@@ -96,7 +101,10 @@ input[type="radio"].visually-hidden {
 
 .site-navigation li:hover .catalog-navigation  {
 	background-color: #f8f7f4;
-	border-radius: 3px;
+	border-radius: 3px;	
+}
+
+.site-navigation li:hover .site-navigation-style {
 	display: block;
 }
 
@@ -105,12 +113,12 @@ input[type="radio"].visually-hidden {
 	left: -7px;
 	top: 100%;
 	padding-top: 7px;
-	width: 142px;
+	width: 142px;	
+	display: none;
 }
 
 
-.catalog-navigation {
-	display: none;
+.catalog-navigation {	
 	margin: 0;
 	padding: 0 0 8px;
 }
@@ -171,8 +179,7 @@ input[type="radio"].visually-hidden {
 
 .user-navigation {
 	display: flex;
-	flex-wrap: wrap;
-	align-items: baseline;
+	flex-wrap: wrap;	
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -196,12 +203,15 @@ input[type="radio"].visually-hidden {
 
 .search-icon {
 	margin: 0;	
-	padding: 0;
+	padding: 0;	
+	background-color: rgba(255, 255, 255, 0.2);
+	border-radius: 50%;
+}
+
+.search-icon a {
 	width: 32px;
 	height: 32px;
 	padding: 7px;
-	background-color: rgba(255, 255, 255, 0.2);
-	border-radius: 50%;
 }
 
 .search-icon a::before {
@@ -211,9 +221,9 @@ input[type="radio"].visually-hidden {
 	height: 20px;	
 	background-image: url("../img/icon-loupe.svg");
 	background-repeat: no-repeat;
-	position: relative;
+	/*position: relative;
 	top: 1px;
-	left: -1px;
+	left: -1px;*/
 }
 
 .search:hover .header-popup {	
@@ -240,19 +250,16 @@ input[type="radio"].visually-hidden {
 }
 
 .profile-icon a {
-	display: block;
+	display: flex;	
+	align-items: center;
+	padding: 4px 8px;
 }
 
 .profile-icon {
-	margin: 0;
-	padding: 0;
-	width: 92px;
-	height: 33px;
+	margin: 0;	
+	width: 92px;	
 	background-color: rgba(255, 255, 255, 0.2);
-	border-radius: 20px;
-	/*padding-top: 6px;
-	padding-bottom: 6px;
-	padding-left: 16px;	*/
+	border-radius: 20px;		
 }
 
 .profile-icon a::before {
@@ -262,9 +269,7 @@ input[type="radio"].visually-hidden {
 	height: 21px;
 	background-image: url("../img/icon-entrance.svg");
 	background-repeat: no-repeat;	
-	margin-right: 8px;
-	position: relative;
-	top: 6px;
+	margin-right: 8px;	
 }
 
 .search-icon .button,
@@ -324,15 +329,16 @@ input[type="radio"].visually-hidden {
 
 
 .cart-icon {	
-	margin: 0;
-	padding: 0;
-	width: 100px;
-	height: 32px;
+	margin: 0;	
+	width: 100px;	
 	background-color: rgba(255, 255, 255, 0.2);
 	border-radius: 20px;
-/*	padding-top: 6px;
-	padding-bottom: 6px;
-	padding-left: 16px;	*/
+}
+
+.cart-icon a {
+	display: flex;
+	align-items: center;
+	padding: 4px 8px;
 }
 
 .cart-icon a::before {
@@ -342,9 +348,7 @@ input[type="radio"].visually-hidden {
 	height: 23px;
 	background-image: url("../img/icon-cart-2.svg");
 	background-repeat: no-repeat;	
-	margin-right: 8px;
-	position: relative;
-	top: 6px;
+	margin-right: 8px;	
 }
 
 .working-information {	
