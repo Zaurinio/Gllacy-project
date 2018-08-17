@@ -151,12 +151,13 @@
 								<option value="expensive-first">сначала дорогие</option>
 								<option value="fat-content">по жирности</option>
 							</select>
+							<div class="select-arrow"></div>
 						</legend>
 					</fieldset>
 
-					<fieldset class="filter-item">
+					<div class="filter-item">
 
-						<legend>Цена: <input type="number" name="filter-range" min="100" max="500" value="100"> руб. - <input type="number" name="filter-range" min="100" max="500" value="500"> руб.</legend>
+						<p>Цена: <input type="number" name="filter-range" min="100" max="500" value="100"> руб. - <input type="number" name="filter-range" min="100" max="500" value="500"> руб.</p>
 						<div class="range-controls">
 							<div class="scale">
 								<div class="bar"></div>
@@ -164,24 +165,24 @@
 							<div class="toogle toogle-min"></div>
 							<div class="toogle toogle-max"></div>
 						</div>
-					</fieldset>
+					</div>
 
-					<fieldset class="filter-item">
-						<legend class="filter-item-description">Жирность:</legend>
-						<div class="filter-item-container">				
-							<input type="radio" name="filter-radio" value="0" id="0%">	
+					<div class="filter-item">
+						<p class="filter-item-description">Жирность:</p>
+						<div class="filter-item-container filter-item-radio">				
+							<input type="radio" name="filter-radio" value="0" id="0%" class="visually-hidden">	
 							<label for="0%">0%</label>					
-							<input type="radio" name="filter-radio" value="0-10" id="0-10" checked>	
+							<input type="radio" name="filter-radio" value="0-10" id="0-10" class="visually-hidden" checked>	
 							<label for="0-10">до 10%</label>	
-							<input type="radio" name="filter-radio" value="10-30" id="10-30">
+							<input type="radio" name="filter-radio" value="10-30" id="10-30" class="visually-hidden">
 							<label for="10-30">до 30%</label>				
-							<input type="radio" name="filter-radio" value="30+" id="30+">
+							<input type="radio" name="filter-radio" value="30+" id="30+" class="visually-hidden">
 							<label for="30+">выше 30%</label>
 						</div>								
-					</fieldset>
+					</div>
 
-					<fieldset class="filter-item">
-						<legend class="filter-item-description">Наполнители</legend>
+					<div class="filter-item">
+						<p class="filter-item-description">Наполнители</p>
 						<div class="filter-item-container">					
 							<input type="checkbox" name="chocolade" id="chocolade" checked>
 							<label for="chocolade">шоколадные</label>
@@ -194,12 +195,13 @@
 							<input type="checkbox" name="jams" id="jams">
 							<label for="jams">джемы</label>
 						</div>
-					</fieldset>
-				</form>
+					</div>
 
-				<p class="filter-apply">
-					<a href="#" class="button">Применить</a>
-				</p>
+					<p class="filter-apply">
+						<button type="submit" class="filter-apply-button">Применить</button>
+					</p>
+				</form>
+				
 			</section>
 
 			<section class="catalog">
@@ -471,7 +473,7 @@
 			</div>
 
 			<div class="site-developer">
-				<img src="img/logo.svg" width="108" height="39" alt="Логотип разработчика сайта">
+				<img src="img/logo-htmlacademy-small.svg" width="108" height="39" alt="Логотип разработчика сайта">
 				<p>Сделано в <a href="https://htmlacademy.ru/">HTML Academy</a> © 2017</p>
 			</div>
 		</div>
