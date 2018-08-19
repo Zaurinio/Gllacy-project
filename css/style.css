@@ -590,7 +590,7 @@ input[type="radio"].visually-hidden {
   	border: none;
   	font-size: 16px;
   	line-height: 18px;
-  	font-weight: 500;
+  	font-weight: 500;  	
 }
 
 .filter-item-sorting select option {
@@ -603,7 +603,7 @@ input[type="radio"].visually-hidden {
 }
 
 
-.select-arrow::before {	
+.filter-item-sorting label::before {	
 	content: "";
 	position: absolute;	
 	top: 39px;
@@ -615,6 +615,7 @@ input[type="radio"].visually-hidden {
     border-left-color: transparent;
     border-bottom-color: transparent;
     cursor: pointer;
+    z-index: -10;
 }
 
 .filter-apply {
@@ -1475,8 +1476,12 @@ a.next:hover {
 	padding-left: 8px;
 }
 
-.site-developer {	
-	margin-left: auto;
+.site-developer {
+	margin-left: auto;	
+}
+
+.developer-logo  {
+	object-fit: cover;
 }
 
 .breadcrumbs {
@@ -1515,6 +1520,7 @@ a.next:hover {
 	width: 879px;
 	display: flex;
 	justify-content: space-between;
+	align-content: space-between;
 	padding-right: 19px;
 }
 
