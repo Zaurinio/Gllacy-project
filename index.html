@@ -8,7 +8,10 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-
+	<input class="visually-hidden" type="radio" id="btn-1" name="toggle" checked>
+    <input class="visually-hidden" type="radio" id="btn-2" name="toggle">
+    <input class="visually-hidden" type="radio" id="btn-3" name="toggle">
+	<div class="site-wrapper">
 	<header class="main-header">
 		<div class="container">
 		<nav class="main-navigation">
@@ -86,30 +89,29 @@
 	<main>
 		<h1 class="visually-hidden">Интернет-магазин мороженого Глейси</h1>
 
+		
 		<div class="container">
-			<div class="production-slider">
-				<input type="radio" id="btn-1" name="toggle" checked>
-          		<input type="radio" id="btn-2" name="toggle">
-          		<input type="radio" id="btn-3" name="toggle">
+			
+			<div class="production-slider">				
           		<div class="slider-controls">
             		<label for="btn-1"></label>
             		<label for="btn-2"></label>
             		<label for="btn-3"></label>
           		</div>
 				<ul class="production-list">
-					<li class="production-item">
+					<li class="production-item" id="slide1">
 						<p class="production-offer">Крем-брюле и пломбир с малиновым джемом</p>
 						<p class="production-order">
 							<a href="#" class="button">Давайте Оба!</a>
 						</p>
 					</li>
-					<li class="production-item">
+					<li class="production-item" id="slide2">
 						<p class="production-offer">Шоколадный пломбир и лимонный сорбет</p>
 						<p class="production-order">
 							<a href="#" class="button">Давайте Оба!</a>
 						</p>
 					</li>
-					<li class="production-item">
+					<li class="production-item" id="slide3">
 						<p class="production-offer">Пломбир с помадкой и клубничный щербет</p>
 						<p class="production-order">
 							<a href="#" class="button">Давайте Оба!</a>
@@ -235,6 +237,7 @@
 					</form>
 				</section>
 			</div>
+			</div>
 		</div>
 
 			<section class="contacts">
@@ -331,9 +334,10 @@
 			</div>
 		</div>
 	</footer>
+
 </body>
 
-<div class="container-popup">
+<div class="container-popup visually-hidden">
 	<button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
 	<p class="write-us">Мы обязательно вам ответим!</p>	
 	<form class="form-write-us" action="https://echo.htmlacademy.ru" method="post" name="form-write-us">

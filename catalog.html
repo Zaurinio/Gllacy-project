@@ -141,65 +141,176 @@
 				</ul>
 				<p class="site-section-description">Сливочное мороженое</p>
 			</div>
-			<section class="filter">				
+			<section class="filter">
 				<form method="get" action="#">
-					<fieldset class="filter-item">
-						<legend>Сортировка
-							<select name="filter">
+					<div class="filter-item filter-item-sorting">
+						<label for="filter">Сортировка</label>
+							<select name="filter" id="filter">
 								<option value="popularity">по популярности</option>
 								<option value="cheap-first">сначала недорогие</option>
 								<option value="expensive-first">сначала дорогие</option>
 								<option value="fat-content">по жирности</option>
 							</select>
-							<div class="select-arrow"></div>
-						</legend>
-					</fieldset>
+							<div class="select-arrow"></div>				
+					</div>
 
-					<div class="filter-item">
+					<div class="filter-item-slider">
 
-						<p>Цена: <input type="number" name="filter-range" min="100" max="500" value="100"> руб. - <input type="number" name="filter-range" min="100" max="500" value="500"> руб.</p>
+						<p class="filter-item-price">Цена: <input type="number" name="filter-range" min="100" max="500" value="100"> руб. - <input type="number" name="filter-range" min="100" max="500" value="500"> руб.</p>
 						<div class="range-controls">
 							<div class="scale">
-								<div class="bar"></div>
+								<div class="bar"></div>							
 							</div>
-							<div class="toogle toogle-min"></div>
-							<div class="toogle toogle-max"></div>
+							<div class="toggle toggle-min"></div>
+							<div class="toggle toggle-max"></div>
 						</div>
 					</div>
 
 					<div class="filter-item">
 						<p class="filter-item-description">Жирность:</p>
-						<div class="filter-item-container filter-item-radio">				
-							<input type="radio" name="filter-radio" value="0" id="0%" class="visually-hidden">	
-							<label for="0%">0%</label>					
-							<input type="radio" name="filter-radio" value="0-10" id="0-10" class="visually-hidden" checked>	
-							<label for="0-10">до 10%</label>	
-							<input type="radio" name="filter-radio" value="10-30" id="10-30" class="visually-hidden">
-							<label for="10-30">до 30%</label>				
-							<input type="radio" name="filter-radio" value="30+" id="30+" class="visually-hidden">
-							<label for="30+">выше 30%</label>
-						</div>								
+						
+							<ul class="filter-item-container filter-item-radio">
+								<li>
+									<label>									
+									<input type="radio" name="filter-radio" value="0" id="0%" class="visually-hidden">		
+									
+										<svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22px" height="22px" viewBox="0 0 25 25">
+										<path d="M12.5,4c4.687,0,8.5,3.813,8.5,8.5c0,4.687-3.813,8.5-8.5,8.5C7.813,21,4,17.187,4,12.5C4,7.813,7.813,4,12.5,4 M12.5,0  C5.597,0,0,5.597,0,12.5S5.597,25,12.5,25S25,19.403,25,12.5S19.403,0,12.5,0L12.5,0z"/>
+										<circle class="filter-radio-on" cx="12.5" cy="12.5" r="4.5"/>
+										</svg>
+									
+									0%</label>	
+								</li>
+								<li>
+									<label for="0-10">									
+									<input type="radio" name="filter-radio" value="0-10" id="0-10" class="visually-hidden" checked>					
+										<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22px" height="22px" viewBox="0 0 25 25">
+										<path d="M12.5,4c4.687,0,8.5,3.813,8.5,8.5c0,4.687-3.813,8.5-8.5,8.5C7.813,21,4,17.187,4,12.5C4,7.813,7.813,4,12.5,4 M12.5,0  C5.597,0,0,5.597,0,12.5S5.597,25,12.5,25S25,19.403,25,12.5S19.403,0,12.5,0L12.5,0z"/>
+										<circle class="filter-radio-on" cx="12.5" cy="12.5" r="4.5"/>
+										</svg>									
+									до 10%</label>
+								</li>
+								<li>
+									<label for="10-30">									
+									<input type="radio" name="filter-radio" value="10-30" id="10-30" class="visually-hidden">	
+										<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22px" height="22px" viewBox="0 0 25 25">
+										<path d="M12.5,4c4.687,0,8.5,3.813,8.5,8.5c0,4.687-3.813,8.5-8.5,8.5C7.813,21,4,17.187,4,12.5C4,7.813,7.813,4,12.5,4 M12.5,0  C5.597,0,0,5.597,0,12.5S5.597,25,12.5,25S25,19.403,25,12.5S19.403,0,12.5,0L12.5,0z"/>
+										<circle class="filter-radio-on" cx="12.5" cy="12.5" r="4.5"/>
+										</svg>									
+									до 30%</label>
+								</li>
+								<li>
+									<label for="30+">								
+									<input type="radio" name="filter-radio" value="30+" id="30+" class="visually-hidden">
+										<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22px" height="22px" viewBox="0 0 25 25">
+										<path d="M12.5,4c4.687,0,8.5,3.813,8.5,8.5c0,4.687-3.813,8.5-8.5,8.5C7.813,21,4,17.187,4,12.5C4,7.813,7.813,4,12.5,4 M12.5,0  C5.597,0,0,5.597,0,12.5S5.597,25,12.5,25S25,19.403,25,12.5S19.403,0,12.5,0L12.5,0z"/>
+										<circle class="filter-radio-on" cx="12.5" cy="12.5" r="4.5"/>
+										</svg>
+									выше 30%</label>
+								</li>
+							</ul>
+													
 					</div>
 
 					<div class="filter-item">
 						<p class="filter-item-description">Наполнители</p>
-						<div class="filter-item-container">					
-							<input type="checkbox" name="chocolade" id="chocolade" checked>
-							<label for="chocolade">шоколадные</label>
-							<input type="checkbox" name="sugar-powder" id="sugar-powder" checked>
-							<label for="sugar-powder">сахарные присыпки</label>
-							<input type="checkbox" name="fruits" id="fruits">
-							<label for="fruits">фрукты</label>
-							<input type="checkbox" name="syrups" id="syrups">
-							<label for="syrups">сиропы</label>
-							<input type="checkbox" name="jams" id="jams">
-							<label for="jams">джемы</label>
-						</div>
+						<ul class="filter-item-container filter-item-checkbox">
+							<li>
+								<label for="chocolade">		
+								<input class="visually-hidden" type="checkbox" name="chocolade" id="chocolade" checked>
+								<svg class="filter-checkbox-off" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="23px" height="23px" viewBox="0 0 23 23" enable-background="new 0 0 23 23" xml:space="preserve">
+								<path d="M20,2c0.542,0,1,0.458,1,1v17c0,0.542-0.458,1-1,1H3c-0.542,0-1-0.458-1-1V3c0-0.542,0.458-1,1-1H20 M20,0H3  C1.35,0,0,1.35,0,3v17c0,1.65,1.35,3,3,3h17c1.65,0,3-1.35,3-3V3C23,1.35,21.65,0,20,0L20,0z"/>
+								</svg>
+								<svg class="filter-checkbox-on" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="27px" height="23px" viewBox="0 0 27 23" enable-background="new 0 0 27 23" xml:space="preserve">
+								<g id="Layer_1">
+								</g>
+								<g id="Layer_2">
+									<g>
+										<polygon points="7.285,7.486 4.456,10.315 12.239,18.098 26.171,4.166 23.343,1.337 12.239,12.439   "/>
+										<path d="M21,20c0,0.542-0.458,1-1,1H3c-0.542,0-1-0.458-1-1V3c0-0.542,0.458-1,1-1h16.908l1.585-1.585C21.051,0.158,20.545,0,20,0    H3C1.35,0,0,1.35,0,3v17c0,1.65,1.35,3,3,3h17c1.65,0,3-1.35,3-3v-9.829l-2,2V20z"/>
+									</g>
+								</g>
+								</svg>
+								шоколадные</label>
+							</li>
+							<li>
+								<label for="sugar-powder">
+								<input class="visually-hidden" type="checkbox" name="sugar-powder" id="sugar-powder" checked>
+								<svg class="filter-checkbox-off" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="23px" height="23px" viewBox="0 0 23 23" enable-background="new 0 0 23 23" xml:space="preserve">
+								<path d="M20,2c0.542,0,1,0.458,1,1v17c0,0.542-0.458,1-1,1H3c-0.542,0-1-0.458-1-1V3c0-0.542,0.458-1,1-1H20 M20,0H3  C1.35,0,0,1.35,0,3v17c0,1.65,1.35,3,3,3h17c1.65,0,3-1.35,3-3V3C23,1.35,21.65,0,20,0L20,0z"/>
+								</svg>
+								<svg class="filter-checkbox-on" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="27px" height="23px" viewBox="0 0 27 23" enable-background="new 0 0 27 23" xml:space="preserve">
+								<g id="Layer_1">
+								</g>
+								<g id="Layer_2">
+									<g>
+										<polygon points="7.285,7.486 4.456,10.315 12.239,18.098 26.171,4.166 23.343,1.337 12.239,12.439   "/>
+										<path d="M21,20c0,0.542-0.458,1-1,1H3c-0.542,0-1-0.458-1-1V3c0-0.542,0.458-1,1-1h16.908l1.585-1.585C21.051,0.158,20.545,0,20,0    H3C1.35,0,0,1.35,0,3v17c0,1.65,1.35,3,3,3h17c1.65,0,3-1.35,3-3v-9.829l-2,2V20z"/>
+									</g>
+								</g>
+								</svg>
+								сахарные присыпки</label>
+							</li>
+							<li>
+								<label for="fruits">
+								<input class="visually-hidden" type="checkbox" name="fruits" id="fruits">
+								<svg class="filter-checkbox-off" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="23px" height="23px" viewBox="0 0 23 23" enable-background="new 0 0 23 23" xml:space="preserve">
+								<path d="M20,2c0.542,0,1,0.458,1,1v17c0,0.542-0.458,1-1,1H3c-0.542,0-1-0.458-1-1V3c0-0.542,0.458-1,1-1H20 M20,0H3  C1.35,0,0,1.35,0,3v17c0,1.65,1.35,3,3,3h17c1.65,0,3-1.35,3-3V3C23,1.35,21.65,0,20,0L20,0z"/>
+								</svg>
+								<svg class="filter-checkbox-on" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="27px" height="23px" viewBox="0 0 27 23" enable-background="new 0 0 27 23" xml:space="preserve">
+								<g id="Layer_1">
+								</g>
+								<g id="Layer_2">
+									<g>
+										<polygon points="7.285,7.486 4.456,10.315 12.239,18.098 26.171,4.166 23.343,1.337 12.239,12.439   "/>
+										<path d="M21,20c0,0.542-0.458,1-1,1H3c-0.542,0-1-0.458-1-1V3c0-0.542,0.458-1,1-1h16.908l1.585-1.585C21.051,0.158,20.545,0,20,0    H3C1.35,0,0,1.35,0,3v17c0,1.65,1.35,3,3,3h17c1.65,0,3-1.35,3-3v-9.829l-2,2V20z"/>
+									</g>
+								</g>
+								</svg>
+								фрукты</label>
+							</li>
+							<li>
+								<label for="syrups">
+								<input class="visually-hidden" type="checkbox" name="syrups" id="syrups">
+								<svg class="filter-checkbox-off" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="23px" height="23px" viewBox="0 0 23 23" enable-background="new 0 0 23 23" xml:space="preserve">
+								<path d="M20,2c0.542,0,1,0.458,1,1v17c0,0.542-0.458,1-1,1H3c-0.542,0-1-0.458-1-1V3c0-0.542,0.458-1,1-1H20 M20,0H3  C1.35,0,0,1.35,0,3v17c0,1.65,1.35,3,3,3h17c1.65,0,3-1.35,3-3V3C23,1.35,21.65,0,20,0L20,0z"/>
+								</svg>
+								<svg class="filter-checkbox-on" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="27px" height="23px" viewBox="0 0 27 23" enable-background="new 0 0 27 23" xml:space="preserve">
+								<g id="Layer_1">
+								</g>
+								<g id="Layer_2">
+									<g>
+										<polygon points="7.285,7.486 4.456,10.315 12.239,18.098 26.171,4.166 23.343,1.337 12.239,12.439   "/>
+										<path d="M21,20c0,0.542-0.458,1-1,1H3c-0.542,0-1-0.458-1-1V3c0-0.542,0.458-1,1-1h16.908l1.585-1.585C21.051,0.158,20.545,0,20,0    H3C1.35,0,0,1.35,0,3v17c0,1.65,1.35,3,3,3h17c1.65,0,3-1.35,3-3v-9.829l-2,2V20z"/>
+									</g>
+								</g>
+								</svg>
+								сиропы</label>
+							</li>
+							<li>
+								<label for="jams">
+								<input class="visually-hidden" type="checkbox" name="jams" id="jams">
+								<svg class="filter-checkbox-off" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="23px" height="23px" viewBox="0 0 23 23" enable-background="new 0 0 23 23" xml:space="preserve">
+								<path d="M20,2c0.542,0,1,0.458,1,1v17c0,0.542-0.458,1-1,1H3c-0.542,0-1-0.458-1-1V3c0-0.542,0.458-1,1-1H20 M20,0H3  C1.35,0,0,1.35,0,3v17c0,1.65,1.35,3,3,3h17c1.65,0,3-1.35,3-3V3C23,1.35,21.65,0,20,0L20,0z"/>
+								</svg>
+								<svg class="filter-checkbox-on" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="27px" height="23px" viewBox="0 0 27 23" enable-background="new 0 0 27 23" xml:space="preserve">
+								<g id="Layer_1">
+								</g>
+								<g id="Layer_2">
+									<g>
+										<polygon points="7.285,7.486 4.456,10.315 12.239,18.098 26.171,4.166 23.343,1.337 12.239,12.439   "/>
+										<path d="M21,20c0,0.542-0.458,1-1,1H3c-0.542,0-1-0.458-1-1V3c0-0.542,0.458-1,1-1h16.908l1.585-1.585C21.051,0.158,20.545,0,20,0    H3C1.35,0,0,1.35,0,3v17c0,1.65,1.35,3,3,3h17c1.65,0,3-1.35,3-3v-9.829l-2,2V20z"/>
+									</g>
+								</g>
+								</svg>
+								джемы</label>
+							</li>
+						</ul>
 					</div>
 
-					<p class="filter-apply">
+					<!-- <p class="filter-apply"> -->
 						<button type="submit" class="filter-apply-button">Применить</button>
-					</p>
+					<!-- </p> -->
 				</form>
 				
 			</section>
